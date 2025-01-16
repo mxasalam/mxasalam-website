@@ -1,18 +1,20 @@
 <head>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/main.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/collapsible.js" defer></script> <!-- Add defer to ensure loading after the content -->
 </head>
+
 <div id="blogs">
     {% for post in site.posts %}
     <div class="blog-item">
         <button class="collapsible">{{ post.title }}</button>
-	<script src="/assets/js/collapsible.js"></script>
-        <div class="content">
+        <div class="content" style="display:none;"> <!-- Hide content initially -->
             {{ post.content | markdownify }}
         </div>
     </div>
     {% endfor %}
 </div>
+
 <nav>
   <a href="{{ site.baseurl }}/about">About</a>
   <a href="{{ site.baseurl }}/blog">Blog</a>
