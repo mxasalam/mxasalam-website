@@ -22,8 +22,8 @@ require:
 
 title: "Mohammed Abdul Salam's Blog"
 description: "Insights on Data and AI"
-baseurl: "/blogs"
 url: "https://mxasalam.com"
+baseurl: "https://mxasalam.com/blog"
 author: "Mohammed Abdul Salam"
 github_username:  mxasalam
 
